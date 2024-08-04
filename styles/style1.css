@@ -582,9 +582,8 @@ footer {
 }
 
 .footer-bottom a:hover {
-  color: #f0f0f0; /* Подчеркивание при наведении */
+  color: #f0f0f0;
 }
-
 
 .social-link {
   display: block; /* Убедитесь, что ссылки занимают всю ширину контейнера */
