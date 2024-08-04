@@ -565,7 +565,26 @@ footer {
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.875rem;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
 }
+
+.footer-bottom p {
+  margin: 0;
+  line-height: 1.5; 
+}
+
+.footer-bottom a {
+  color: #bebebe;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.footer-bottom a:hover {
+  color: #f0f0f0; /* Подчеркивание при наведении */
+}
+
 
 .social-link {
   display: block; /* Убедитесь, что ссылки занимают всю ширину контейнера */
