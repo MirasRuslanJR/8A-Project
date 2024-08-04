@@ -1,0 +1,681 @@
+* {
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari и Opera */
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Header styling */
+header {
+  position: relative;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.3s, box-shadow 0.3s, top 0.3s;; /* Переход для фона и тени */
+}
+
+/* Логотипы и ссылки */
+.menu img {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.link-anim {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.link-anim:hover {
+  transform: scale(1.1); /* Уменьшено увеличение при наведении для лучшего эффекта */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Добавлен легкий тень для улучшения читаемости */
+}
+
+/* Стили для выбора языка */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.language-dropbtn {
+  background-color: #5e5e5e;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.language-dropbtn:hover {
+  border-radius: 8px;
+  
+}
+
+.language-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.language-dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 1s;
+}
+
+.language-dropdown-content a:hover {
+  background-color: #00b7ff;
+  
+}
+
+.kzindex-btn:hover{
+  border-radius: 5px 5px 0 0;
+}
+
+.enindex-btn:hover{
+  border-radius: 0 0 5px 5px;
+}
+
+.language-dropdown:hover .language-dropdown-content {
+  display: block;
+}
+
+.language-dropdown:hover .language-dropbtn {
+  background-color: #555;
+}
+
+.insta:hover {
+  color: #008cff;
+}
+
+.tiktok:hover {
+  color: #ff0077;
+}
+
+.whatsapp:hover {
+  color: #15ff00;
+}
+
+.gis:hover {
+  color: rgb(179, 255, 0);
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, 0%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 300ms ease;
+}
+
+.swiper-text-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  text-shadow: none;
+  color: aqua;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%);
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullets {
+  display: none;
+}
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.facts {
+  border-radius: 10px 0 0 10px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-right: -20px;
+  background-color: #67c2ff;
+  background-size: cover;
+}
+
+.fact {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fact:hover{
+  background-color: #a2e5ff;
+  transform: translate(-0%, -40%) scale(1.2);
+  text-shadow: none;
+  border: 1px solid #008cff;
+  width: 250px;
+}
+
+.fact h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+main {
+  margin-top: 60px; /* чтобы контент не перекрывал хедер */
+  padding: 20px;
+}
+
+/* Стили для секции новостей */
+.news {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Позволяет контейнерам переноситься на следующую строку при нехватке места */
+  gap: 20px; /* Расстояние между элементами */
+  justify-content: center; /* Центрирование элементов по горизонтали */
+}
+
+/* Заголовок секции новостей */
+.news h1 {
+  width: 100%; /* Заголовок занимает всю ширину секции */
+  text-align: center; /* Выравнивание заголовка по центру */
+  font-family: 'Kanit', sans-serif; /* Шрифт для заголовка */
+  font-size: 2rem; /* Размер шрифта */
+  color: #333; /* Цвет заголовка */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Контейнеры новостей */
+.news-container {
+  width: calc(33.333% - 20px); /* Ширина для трех элементов в ряд с учетом отступов */
+  max-width: 300px; /* Максимальная ширина контейнера */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Стили для заголовка новости */
+.news-container h3 {
+  margin: 0 0 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Стили для текста новости */
+.news-container p {
+  margin: 0;
+  font-size: 1rem; /* Размер шрифта */
+  color: #666; /* Цвет текста */
+  line-height: 1.6; /* Высота строки для удобочитаемости */
+}
+
+/* Эффект при наведении на контейнер новости */
+.news-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.beyim-synaq{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.beyim-synaq a{
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.beyim-synaq a:hover{
+  transform: scale(1.1);
+  text-shadow: none;
+}
+
+.about-us {
+  margin-top: 50px; /* Удалите отступы */
+  padding: 15px; /* Внутренние отступы */
+  width: 100vw; /* Ширина на весь viewport */
+  background-color: #8beeff; /* Цвет фона */
+  border-radius: 0 8px 8px 0; /* Закругление углов */
+  box-sizing: border-box; /* Учитывать паддинги и бордеры */
+  position: relative; /* Это может помочь в некоторых случаях с позиционированием */
+  left: 50%; /* Перемещаем влево на 50% */
+  right: 50%; /* Перемещаем вправо на 50% */
+  margin-left: -50vw; /* Корректируем смещение */
+  margin-right: -50vw; /* Корректируем смещение */
+}
+
+/* Внутренние элементы */
+.content {
+  width: 100%; /* Ширина контента на всю доступную ширину */
+  max-width: 1200px; /* Максимальная ширина, если требуется */
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-us h1 {
+  font-size: 32px; /* Размер шрифта для заголовка */
+  color: #222; /* Цвет текста для заголовка */
+  margin-bottom: 15px; /* Отступ снизу, чтобы отделить заголовок от абзаца */
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+  
+.content p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.animation {
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  transition: transform 1s ease, color 0.4s ease;
+}
+
+.animation:hover {
+  transform: translateY(50px);
+  color: #008cff;
+}
+
+.kurator {
+  background-color: #e6e3e3; /* Цвет фона */
+  padding: 15px; /* Внутренние отступы */
+  border-radius: 0 8px 8px 0; /* Закругление углов */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  text-align: left; /* Выравнивание текста по левому краю */
+  opacity: 0; /* Скрыто по умолчанию */
+  max-height: 0; /* Начальная высота */
+  overflow: hidden; /* Прячет содержимое за пределами элемента */
+  transition: opacity 0.5s ease, max-height 0.5s ease; /* Плавный переход */
+  display: grid; /* Используем сетку */
+  place-items: center; /* Центрирование содержимого */
+  width: 100%; /* Ширина на весь контейнер */
+  margin: 50px auto 0; /* Центрирование блока по горизонтали и отступ сверху */
+  box-sizing: border-box; /* Учитывать паддинги и бордеры */
+}
+
+
+.kurator.show {
+  opacity: 1; /* Видимый блок */
+  max-height: 600px; /* Максимальная высота для отображения */
+}
+
+.kurator-content {
+  display: flex;
+  flex-direction: row; /* Горизонтальное размещение */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal; /* Отступ между изображением и текстом */
+}
+
+.kurator img {
+  border-radius: 10px 0 0 10px;
+  max-width: 100%; /* Адаптивная ширина изображения */
+  height: auto; /* Сохранение пропорций */
+  object-fit: cover; /* Сохранение пропорций и предотвращение искажения */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Вертикальное размещение текста */
+  justify-content: center; /* Центрирование текста по вертикали */
+}
+
+.text-content {
+  margin-bottom: 10px; /* Отступ между основным и дополнительным текстом */
+}
+
+.additional-info {
+  margin-top: 10px; /* Отступ сверху для дополнительного текста */
+}
+
+/* Основной стиль для <article> */
+.about-NIS {
+  display: flex;
+  flex-direction: row; /* Располагаем контент по горизонтали */
+  gap: 20px; /* Отступ между колонками */
+  padding: 20px;
+  background-color: #f9f9f9; /* Светлый фон для всего блока */
+  border-radius: 8px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для создания эффекта приподнятости */
+  max-width: 1200px; /* Максимальная ширина блока */
+  margin: 20px auto; /* Отступ сверху и снизу, центрирование по горизонтали */
+}
+
+/* Стиль для первой колонки */
+.nis-content1 {
+  flex: 1; /* Занимает доступное пространство */
+  padding: 20px;
+  background-color: #ffffff; /* Белый фон для контента */
+  border-radius: 8px; /* Скругленные углы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для создания легкого эффекта */
+}
+
+/* Стиль для второй колонки */
+.nis-content2 {
+  flex: 1; /* Занимает доступное пространство */
+  padding: 20px;
+  background-color: #ffffff; /* Белый фон для контента */
+  border-radius: 8px; /* Скругленные углы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для создания легкого эффекта */
+}
+
+/* Заголовки */
+.about-NIS h1, .about-NIS h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333; /* Темный цвет текста для заголовков */
+}
+
+/* Параграфы */
+.about-NIS p {
+  margin: 0 0 10px;
+  line-height: 1.6; /* Повышает читаемость текста */
+  color: #555; /* Цвет текста для параграфов */
+}
+
+/* Список */
+.nis-content2 ul {
+  padding-left: 20px; /* Отступ для списка */
+}
+
+.nis-content2 li {
+  margin-bottom: 10px;
+  color: #444; /* Цвет текста для элементов списка */
+}
+
+
+.map-container {
+  display: flex; /* Используем Flexbox для размещения элементов по бокам */
+  width: 100%;
+  height: 50vh; /* Высота секции на весь видимый экран */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Убедитесь, что padding и border включены в ширину и высоту */
+}
+
+.map-container .map {
+  flex: 2; /* Карта занимает большую часть ширины секции */
+}
+
+.map-container .info {
+  flex: 1; /* Текст занимает меньшую часть ширины секции */
+  padding: 1rem; /* Отступы для текста */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right; /* Выровнять текст по правому краю */
+}
+
+.map-container .map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-container h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.map-container p {
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-section a {
+  color: #f9f9f9;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+
+.footer-section a:hover {
+  text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.875rem;
+}
+
+.social-link {
+  display: block; /* Убедитесь, что ссылки занимают всю ширину контейнера */
+  position: relative; /* Для правильного позиционирования стрелки */
+  color: #f9f9f9;
+  text-decoration: none;
+  margin: 5px 0;
+  overflow: hidden; /* Скрывает стрелку за пределами ссылки */
+}
+
+.arrow {
+  opacity: 0; /* Скрыть стрелку по умолчанию */
+  position: absolute; /* Абсолютное позиционирование относительно родителя */
+  top: 50%; /* Вертикальное центрирование относительно текста */
+  transform: translateY(-50%) translateX(30px); /* Начальная позиция стрелки за пределами видимой области */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное изменение прозрачности и перемещения */
+}
+
+.social-link:hover .arrow {
+  opacity: 1; /* Показать стрелку при наведении */
+  transform: translateY(-50%) translateX(0); /* Переместить стрелку к тексту при наведении */
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  animation: fadeIn 0.5s ease-out forwards; /* Animation for entering view */
+}
+
+.fade-in.not-visible {
+  animation: fadeOut 0.5s ease-out forwards; /* Animation for exiting view */
+}
+
+
+.marquee-container {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #f0f0f0; /* Можно изменить цвет фона */
+}
+
+.marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  flex: 1;
+  white-space: nowrap;
+  padding: 0 1rem;
+  font-size: 50px;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+/* Медиа-запросы (или же просто адаптация) */
+@media (max-width: 768px) {
+  .news-container {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .news-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .kurator-content {
+    flex-direction: column; /* Вертикальное размещение на узких экранах */
+  }
+
+  .kurator img {
+    width: 100%; /* Заполнение ширины доступного пространства */
+  }
+}
