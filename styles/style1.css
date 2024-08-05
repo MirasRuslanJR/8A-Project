@@ -193,7 +193,8 @@ header {
 }
 
 .scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(46, 46, 46, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .facts {
@@ -209,7 +210,6 @@ header {
 
 .fact {
   border: 1px solid #ddd;
-  border-radius: 5px;
   padding: 10px;
   background-color: #fff;
   text-align: center;
@@ -224,7 +224,7 @@ header {
 .fact:hover{
   background-color: #a2e5ff;
   transform: translate(-0%, -40%) scale(1.2);
-  text-shadow: none;
+  border-radius: 10px;
   border: 1px solid #008cff;
   width: 250px;
 }
@@ -428,61 +428,72 @@ main {
   margin-top: 10px; /* Отступ сверху для дополнительного текста */
 }
 
-/* Основной стиль для <article> */
 .about-NIS {
   display: flex;
-  flex-direction: row; /* Располагаем контент по горизонтали */
-  gap: 20px; /* Отступ между колонками */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  gap: 20px;
   padding: 20px;
-  background-color: #f9f9f9; /* Светлый фон для всего блока */
-  border-radius: 8px; /* Скругленные углы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для создания эффекта приподнятости */
-  max-width: 1200px; /* Максимальная ширина блока */
-  margin: 20px auto; /* Отступ сверху и снизу, центрирование по горизонтали */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1300px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, height 0.5s ease; /* Добавлено изменение высоты */
+  height: 215px; /* Начальная высота контейнера */
 }
 
-/* Стиль для первой колонки */
-.nis-content1 {
-  flex: 1; /* Занимает доступное пространство */
-  padding: 20px;
-  background-color: #ffffff; /* Белый фон для контента */
-  border-radius: 8px; /* Скругленные углы */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для создания легкого эффекта */
+.nis-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Для абсолютного позиционирования .nis-content2 */
 }
 
-/* Стиль для второй колонки */
+.nis-content1,
 .nis-content2 {
-  flex: 1; /* Занимает доступное пространство */
   padding: 20px;
-  background-color: #ffffff; /* Белый фон для контента */
-  border-radius: 8px; /* Скругленные углы */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для создания легкого эффекта */
+  background-color: #ffffff;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative; /* Для правильного отображения z-index */
 }
 
-/* Заголовки */
-.about-NIS h1, .about-NIS h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #333; /* Темный цвет текста для заголовков */
+/* Изначальное состояние .nis-content1 */
+.nis-content1 {
+  transform: scale(1); /* Уменьшенный размер по умолчанию */
+  z-index: 1;
 }
 
-/* Параграфы */
-.about-NIS p {
-  margin: 0 0 10px;
-  line-height: 1.6; /* Повышает читаемость текста */
-  color: #555; /* Цвет текста для параграфов */
+/* Изначальное состояние .nis-content2 */
+.nis-content2 {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Поверх .nis-content1 */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Список */
-.nis-content2 ul {
-  padding-left: 20px; /* Отступ для списка */
+/* Показ .nis-content2 при наведении на .about-NIS */
+.about-NIS:hover .nis-content1 {
+  transform: scale(1); /* Восстанавливает нормальный размер при наведении */
 }
 
-.nis-content2 li {
-  margin-bottom: 10px;
-  color: #444; /* Цвет текста для элементов списка */
+.about-NIS:hover .nis-content2 {
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Изменение высоты контейнера при наведении */
+.about-NIS:hover {
+  height: 330px; /* Увеличенная высота контейнера при наведении */
+}
 
 .map-container {
   display: flex; /* Используем Flexbox для размещения элементов по бокам */
@@ -644,6 +655,16 @@ footer {
   animation: fadeOut 0.5s ease-out forwards; /* Animation for exiting view */
 }
 
+@keyframes anim-box {
+  from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+  }
+}
 
 .marquee-container {
   margin-top: 20px;
