@@ -28,6 +28,96 @@
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    
+
+<!-- Медиа-запросы (или же просто адаптация) -->
+    <style>
+        @media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .close-menu {
+    display: block;
+  }
+
+  .menu a {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .language-dropdown {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .NIS-logo, .logoo {
+    display: none;
+  }
+
+  .enindex-btn:hover, .kzindex-btn:hover {
+    border-radius: 0;
+  }
+
+  .swiper-text-overlay {
+    display: none;
+  }
+
+  .scrolled {
+    display: none;
+  }
+
+  .news-container {
+    width: calc(50% - 20px);
+  }
+
+  .beyim-synaq-img {
+    max-width: 10.875rem;
+  }
+  .facts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fact {
+    margin: 30px;
+  }
+}
+
+/* Для ещё более узких экранов */
+@media (max-width: 425px) {
+  .news-container {
+    width: 100%;
+  }
+}
+
+/* Для небольших экранов */
+@media (max-width: 600px) {
+  .kurator-content {
+    flex-direction: column;
+  }
+
+  .kurator img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fact {
+    margin: 20px;
+  }
+}
+    </style>
 </head>
 <body>
     <header>
