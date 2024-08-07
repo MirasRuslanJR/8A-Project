@@ -855,9 +855,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .facts {
-  
-  }
   .fact {
     margin: 20px;
   }
