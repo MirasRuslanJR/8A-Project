@@ -197,6 +197,46 @@ header {
   backdrop-filter: blur(10px);
 }
 
+.facts-h1 {
+  text-align: left;
+  margin-bottom: 60px;
+  padding: 30px;
+  margin-left: -20px;
+  background-color: #67c2ff;
+  border-radius: 0 10px 10px 0;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fact-h1 {
+  font-size: 30px;
+  color: #000000;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px 0;
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+}
+
+.fact-h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Positions the line at the bottom of the text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ffffff; /* Color of the underline */
+  transform: scaleX(0); /* Starts with no width */
+  transform-origin: bottom right; /* Ensures the line grows from right to left */
+  transition: transform 0.3s ease-in-out; /* Animation speed and easing */
+}
+
+.fact-h1:hover::after {
+  transform: scaleX(1); /* Expands the line to full width */
+  transform-origin: bottom left; /* Ensures the line grows from left to right */
+}
+
 .facts {
   border-radius: 10px 0 0 10px;
   margin-left: 30px;
@@ -323,7 +363,7 @@ main {
   margin-top: 50px; /* Удалите отступы */
   padding: 15px; /* Внутренние отступы */
   width: 100vw; /* Ширина на весь viewport */
-  background-color: #8beeff; /* Цвет фона */
+  background-color: #67c2ff; /* Цвет фона */
   border-radius: 0 8px 8px 0; /* Закругление углов */
   box-sizing: border-box; /* Учитывать паддинги и бордеры */
   position: relative; /* Это может помочь в некоторых случаях с позиционированием */
@@ -375,7 +415,7 @@ main {
 .kurator {
   background-color: #e6e3e3; /* Цвет фона */
   padding: 15px; /* Внутренние отступы */
-  border-radius: 0 8px 8px 0; /* Закругление углов */
+  border-radius: 10px; /* Закругление углов */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
   max-width: 1200px; /* Максимальная ширина контейнера */
   text-align: left; /* Выравнивание текста по левому краю */
@@ -386,7 +426,8 @@ main {
   display: grid; /* Используем сетку */
   place-items: center; /* Центрирование содержимого */
   width: 100%; /* Ширина на весь контейнер */
-  margin: 50px auto 0; /* Центрирование блока по горизонтали и отступ сверху */
+  margin: 50px auto 0;
+  margin-bottom: 30px; /* Центрирование блока по горизонтали и отступ сверху */
   box-sizing: border-box; /* Учитывать паддинги и бордеры */
 }
 
@@ -410,7 +451,10 @@ main {
 .kurator img {
   border-radius: 10px 0 0 10px;
   max-width: 100%; /* Адаптивная ширина изображения */
-  height: auto; /* Сохранение пропорций */
+  height: 100%;
+  margin-left: -15px;
+  margin-top: -15px;
+  margin-bottom: -15px;
   object-fit: cover; /* Сохранение пропорций и предотвращение искажения */
 }
 
@@ -526,15 +570,17 @@ main {
 .map-container h1 {
   font-size: 2rem;
   margin: 0.5rem 0;
+  text-align-last: center;
 }
 
 .map-container p {
   font-size: 1rem;
+  text-align-last: center;
 }
 
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #67c2ff;
+  color: rgb(0, 0, 0);
   padding: 20px;
   position: relative;
   width: 100%;
@@ -565,12 +611,14 @@ footer {
 }
 
 .footer-section a {
-  color: #f9f9f9;
-  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  color: #979797;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
 }
 
 .footer-section a:hover {
-  text-decoration: none; /* Убирает подчеркивание при наведении */
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .footer-bottom {
@@ -578,7 +626,6 @@ footer {
   font-size: 0.875rem;
   padding: 20px 0;
   text-align: center;
-  border-top: 1px solid #e9ecef;
 }
 
 .footer-bottom p {
@@ -593,7 +640,7 @@ footer {
 }
 
 .footer-bottom a:hover {
-  color: #f0f0f0;
+  color: #ffffff;
 }
 
 .social-link {
@@ -678,6 +725,9 @@ footer {
   display: flex;
   width: 200%;
   animation: marquee 15s linear infinite;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .marquee span {

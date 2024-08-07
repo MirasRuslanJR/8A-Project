@@ -114,4 +114,3 @@ document.querySelector('.animation').addEventListener('click', function() {
     const kuratorArticle = document.querySelector('.kurator');
     kuratorArticle.classList.toggle('show');
   });
-  
