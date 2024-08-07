@@ -15,6 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const closeMenu = document.querySelector('.close-menu');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.add('active'); // Открытие меню
+    });
+
+    closeMenu.addEventListener('click', function() {
+        menu.classList.remove('active'); // Закрытие меню
+    });
+
+    // Закрытие меню при клике вне его области
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove('active'); // Закрытие меню при клике вне его области
+        }
+    });
+});
+
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;

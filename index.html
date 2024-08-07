@@ -31,19 +31,22 @@
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <nav class="menu" id="menu">
-            <a class="link-anim" href="#" target="_blank"><img src="./img/logo.png" alt="Logo"></a>
-            <a class="link-anim" href="https://ura.nis.edu.kz/" target="_blank"><img src="./img/NIS.png" alt="NIS"></a>
+            <button class="close-menu" aria-label="Close menu">&times;</button> <!-- Кнопка для закрытия -->
+            <a class="link-anim logoo" href="#" target="_blank"><img src="./img/logo.png" alt="Logo"></a>
+            <a class="link-anim NIS-logo" href="https://ura.nis.edu.kz/" target="_blank"><img src="./img/NIS.png" alt="NIS"></a>
             <a class="insta link-anim" href="https://www.instagram.com/7a_nis_ura/" target="_blank">Instagram</a>
             <a class="tiktok link-anim" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">TikTok</a>
             <a class="whatsapp link-anim" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K" target="_blank">Whatsapp</a>
             <a class="gis link-anim" href="https://go.2gis.com/8ifvs" target="_blank">2GIS</a>
             <div id="language-menu" class="language-dropdown">
-                <button class="language-dropbtn ">Русский</button>
+                <button class="language-dropbtn">Русский</button>
                 <div class="language-dropdown-content">
                     <a class="kzindex-btn" href="kzindex.html" target="_blank">Қазақ</a>
                     <a class="enindex-btn" href="enindex.html" target="_blank">English</a>
                 </div>
+            </div>
         </nav>
         </div>
         <div class="swiper-container">
@@ -64,7 +67,7 @@
         <article class="facts-h1 fade-in">
             <h1 class="fact-h1 fade-in">Информации о нашем классе</h1>
         </article>
-        <section class="facts fade-in">
+        <section class="facts">
             <div class="fact">
                 <h1>Учеников в нашем классе</h1>
                 <p class="number" data-end="32">0</p>
@@ -98,7 +101,7 @@
             </div>
         </section>
         <section class="beyim-synaq">
-           <a href="https://synaq.beyim.ai/ru" target="_blank"><img src="./img/BeyimSynaqRU.png" alt="BeyimSynaq"></a>
+           <a href="https://synaq.beyim.ai/ru" target="_blank"><img class="beyim-synaq-img" src="./img/BeyimSynaqRU.png" alt="BeyimSynaq"></a>
         </section>
         <article class="about-us fade-in">
             <div class="content">

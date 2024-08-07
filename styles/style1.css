@@ -30,11 +30,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  transition: background-color 0.3s, box-shadow 0.3s, top 0.3s;; /* Переход для фона и тени */
+  z-index: 10; 
+  transition: all 0.3s ease;
 }
 
-/* Логотипы и ссылки */
+/* Стили для ссылок и изображений в меню */
 .menu img {
   height: 40px;
   width: auto;
@@ -42,7 +42,7 @@ header {
 }
 
 .link-anim {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
   margin: 0 15px;
   transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -52,8 +52,8 @@ header {
 }
 
 .link-anim:hover {
-  transform: scale(1.1); /* Уменьшено увеличение при наведении для лучшего эффекта */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Добавлен легкий тень для улучшения читаемости */
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Стили для выбора языка */
@@ -65,18 +65,18 @@ header {
 
 .language-dropbtn {
   background-color: #5e5e5e;
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 50px;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
 }
 
 .language-dropbtn:hover {
+  background-color: #555;
   border-radius: 8px;
-  
 }
 
 .language-dropdown-content {
@@ -84,7 +84,7 @@ header {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   z-index: 1;
 }
@@ -94,19 +94,18 @@ header {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  transition: background-color 1s;
+  transition: background-color 0.3s;
 }
 
 .language-dropdown-content a:hover {
   background-color: #00b7ff;
-  
 }
 
-.kzindex-btn:hover{
+.kzindex-btn:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.enindex-btn:hover{
+.enindex-btn:hover {
   border-radius: 0 0 5px 5px;
 }
 
@@ -114,8 +113,37 @@ header {
   display: block;
 }
 
-.language-dropdown:hover .language-dropbtn {
-  background-color: #555;
+/* Стили для кнопки меню и адаптивное поведение */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 20px; /* Расположение сверху */
+  left: 20px; /* Расположение слева */
+  width: 40px; /* Размер кнопки */
+  height: 40px; /* Размер кнопки */
+  background: none; /* Удалить фон */
+  font-size: 24px; /* Размер шрифта для иконки */
+  color: white; /* Цвет текста или иконки */
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+}
+
+.menu.active {
+  transform: translateX(0); /* Меню появляется */
+}
+
+.close-menu {
+  position: absolute; /* Абсолютное позиционирование для размещения справа */
+  top: 20px; /* Расположение сверху */
+  right: 20px; /* Расположение справа */
+  font-size: 24px; /* Размер шрифта для иконки */
+  color: white; /* Цвет иконки */
+  background: none; /* Удаление фона */
+  border: none; /* Удаление границы */
+  cursor: pointer; /* Курсор при наведении */
+  z-index: 11;
 }
 
 .insta:hover {
@@ -748,23 +776,89 @@ footer {
 
 /* Медиа-запросы (или же просто адаптация) */
 @media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .close-menu {
+    display: block;
+  }
+
+  .menu a {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .language-dropdown {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .NIS-logo, .logoo {
+    display: none;
+  }
+
+  .enindex-btn:hover, .kzindex-btn:hover {
+    border-radius: 0;
+  }
+
+  .swiper-text-overlay {
+    display: none;
+  }
+
+  .scrolled {
+    display: none;
+  }
+
   .news-container {
     width: calc(50% - 20px);
   }
+
+  .beyim-synaq-img {
+    max-width: 10.875rem;
+  }
+  .facts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fact {
+    margin: 30px;
+  }
 }
 
-@media (max-width: 480px) {
+/* Для ещё более узких экранов */
+@media (max-width: 425px) {
   .news-container {
     width: 100%;
   }
 }
 
+/* Для небольших экранов */
 @media (max-width: 600px) {
   .kurator-content {
-    flex-direction: column; /* Вертикальное размещение на узких экранах */
+    flex-direction: column;
   }
 
   .kurator img {
-    width: 100%; /* Заполнение ширины доступного пространства */
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .facts {
+  
+  }
+  .fact {
+    margin: 20px;
   }
 }
