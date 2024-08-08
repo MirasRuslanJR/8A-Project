@@ -212,14 +212,6 @@ header {
   filter: brightness(60%);
 }
 
-.swiper-pagination {
-  display: none;
-}
-
-.swiper-pagination-bullets {
-  display: none;
-}
-
 .scrolled {
   background: rgba(46, 46, 46, 0.3);
   backdrop-filter: blur(10px);
@@ -392,7 +384,6 @@ main {
   padding: 15px; /* Внутренние отступы */
   width: 100vw; /* Ширина на весь viewport */
   background-color: #67c2ff; /* Цвет фона */
-  border-radius: 0 8px 8px 0; /* Закругление углов */
   box-sizing: border-box; /* Учитывать паддинги и бордеры */
   position: relative; /* Это может помочь в некоторых случаях с позиционированием */
   left: 50%; /* Перемещаем влево на 50% */
