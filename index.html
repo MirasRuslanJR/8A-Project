@@ -125,16 +125,50 @@
     margin-bottom: 20px;
     flex-direction: column;
   }
+  .about-NIS {
+    height: 450px;
+  }
+  .about-NIS:hover {
+  height: 500px; /* Увеличенная высота контейнера при наведении */
+  } 
+  
+  .kurator {
+    width: 100%;
+  height: auto; /* или фиксированная высота, если необходимо */
+  overflow: hidden;
+
+  }
+
+  .kurator img {
+    border-radius: 10px 10px 0 0;
+    height: 100%; /* Автоматическая высота в зависимости от ширины */
+    max-width: 100%; /* Чтобы изображение не превышало ширину контейнера */
+    margin: 0; /* Удаление всех отрицательных значений */
+  }
+}
+
+@media (max-width: 375px) {
+  .about-NIS {
+    height: 550px;
+  }
+  .about-NIS:hover {
+  height: 550px; /* Увеличенная высота контейнера при наведении */
+  } 
+}
+
+@media (max-width: 320px) {
+  .about-NIS {
+    height: 650px;
+  }
+  .about-NIS:hover {
+  height: 650px; /* Увеличенная высота контейнера при наведении */
+  } 
 }
 
 /* Для небольших экранов */
 @media (max-width: 600px) {
   .kurator-content {
     flex-direction: column;
-  }
-
-  .kurator img {
-    width: 100%;
   }
 }
 
