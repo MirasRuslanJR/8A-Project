@@ -131,3 +131,17 @@ document.querySelector('.animation').addEventListener('click', function() {
     const kuratorArticle = document.querySelector('.kurator');
     kuratorArticle.classList.toggle('show');
   });
+
+  window.onscroll = function() {
+    var btn = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = 'block';
+    } else {
+        btn.style.display = 'none';
+    }
+};
+
+// Прокрутка вверх при нажатии кнопки
+document.getElementById('scrollToTopBtn').onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};  

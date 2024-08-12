@@ -8,6 +8,11 @@
   display: none; /* Для Chrome, Safari и Opera */
 }
 
+::selection {
+  background-color: #008cff;
+  color: rgb(0, 0, 0);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -34,6 +39,10 @@ header {
   transition: all 0.3s ease;
 }
 
+.menu-toggle img {
+  width: 30px;
+}
+
 /* Стили для ссылок и изображений в меню */
 .menu img {
   height: 40px;
@@ -46,8 +55,10 @@ header {
   text-decoration: none;
   margin: 0 15px;
   transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  font-family: "Kanit", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
   font-size: 20px;
 }
 
@@ -234,25 +245,7 @@ header {
   font-weight: 700;
   margin: 0;
   padding: 10px 0;
-  position: relative; /* Ensure the pseudo-element is positioned correctly */
-}
-
-.fact-h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0; /* Positions the line at the bottom of the text */
-  left: 0;
-  width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background-color: #ffffff; /* Color of the underline */
-  transform: scaleX(0); /* Starts with no width */
-  transform-origin: bottom right; /* Ensures the line grows from right to left */
-  transition: transform 0.3s ease-in-out; /* Animation speed and easing */
-}
-
-.fact-h1:hover::after {
-  transform: scaleX(1); /* Expands the line to full width */
-  transform-origin: bottom left; /* Ensures the line grows from left to right */
+  position: relative;
 }
 
 .facts {
@@ -333,10 +326,11 @@ main {
   padding: 20px;
   box-sizing: border-box;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
+  text-align: center;
 }
 
 /* Стили для заголовка новости */
@@ -387,7 +381,11 @@ main {
   left: 50%; /* Перемещаем влево на 50% */
   right: 50%; /* Перемещаем вправо на 50% */
   margin-left: -50vw; /* Корректируем смещение */
-  margin-right: -50vw; /* Корректируем смещение */
+  margin-right: -50vw; 
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Внутренние элементы */
@@ -395,9 +393,6 @@ main {
   width: 100%; /* Ширина контента на всю доступную ширину */
   max-width: 1200px; /* Максимальная ширина, если требуется */
   margin: 0 auto;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .about-us h1 {
@@ -414,6 +409,9 @@ main {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .animation {
@@ -456,13 +454,13 @@ main {
 
 .kurator-content {
   display: flex;
-  flex-direction: row; /* Горизонтальное размещение */
-  align-items: flex-start; /* Выравнивание по верхнему краю */
+  flex-direction: row;
+  align-items: flex-start;
   gap: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal; /* Отступ между изображением и текстом */
+  font-style: normal;
 }
 
 .kurator img {
@@ -472,7 +470,12 @@ main {
   margin-left: -15px;
   margin-top: -15px;
   margin-bottom: -15px;
-  object-fit: cover; /* Сохранение пропорций и предотвращение искажения */
+  object-fit: cover;
+  transition: margin-left 0.5s ease;
+}
+
+.kurator img:hover {
+  margin-left: -210px;
 }
 
 .text-container {
@@ -490,70 +493,39 @@ main {
 }
 
 .about-NIS {
-  display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
-  gap: 20px;
   padding: 20px;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1300px;
-  margin: 20px auto;
-  position: relative;
+  margin: 20px;
   overflow: hidden;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, height 0.5s ease; /* Добавлено изменение высоты */
-  height: 215px; /* Начальная высота контейнера */
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nis-content-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative; /* Для абсолютного позиционирования .nis-content2 */
-}
-
-.nis-content1,
-.nis-content2 {
-  padding: 20px;
-  background-color: #ffffff;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  position: relative; /* Для правильного отображения z-index */
-}
-
-/* Изначальное состояние .nis-content1 */
-.nis-content1 {
-  transform: scale(1); /* Уменьшенный размер по умолчанию */
-  z-index: 1;
-}
-
-/* Изначальное состояние .nis-content2 */
-.nis-content2 {
+  justify-content: space-between;
+  gap: 20px;
   opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2; /* Поверх .nis-content1 */
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  animation: aboutNis1 2s forwards;
 }
 
-/* Показ .nis-content2 при наведении на .about-NIS */
-.about-NIS:hover .nis-content1 {
-  transform: scale(1); /* Восстанавливает нормальный размер при наведении */
+.nis-content1, .nis-content2 {
+  width: 48%;
+  animation: aboutNis2 2s forwards;
 }
 
-.about-NIS:hover .nis-content2 {
-  opacity: 1;
-  visibility: visible;
+.nis-content2 {
+  animation-delay: 1s;
+  text-align: center;
 }
 
-/* Изменение высоты контейнера при наведении */
-.about-NIS:hover {
-  height: 330px; /* Увеличенная высота контейнера при наведении */
+.about-NIS img {
+  margin-top: 25px;
+  width: 40px;
 }
 
 .map-container {
@@ -562,7 +534,12 @@ main {
   height: 50vh; /* Высота секции на весь видимый экран */
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Убедитесь, что padding и border включены в ширину и высоту */
+  margin-top: 20px;
+  box-sizing: border-box; 
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;/* Убедитесь, что padding и border включены в ширину и высоту */
 }
 
 .map-container .map {
@@ -570,12 +547,11 @@ main {
 }
 
 .map-container .info {
-  flex: 1; /* Текст занимает меньшую часть ширины секции */
-  padding: 1rem; /* Отступы для текста */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: right; /* Выровнять текст по правому краю */
+  text-align: right;
 }
 
 .map-container .map iframe {
@@ -595,31 +571,38 @@ main {
   text-align-last: center;
 }
 
+.info a {
+  color: #008cff;
+  text-decoration: none;
+}
+
 footer {
-  background-color: #67c2ff;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 20px;
   position: relative;
   width: 100%;
   bottom: 0;
-  text-align: center;
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-top: 1px #888888 solid;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 25px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .footer-section {
   margin: 10px;
   flex: 1;
   min-width: 200px;
-}
-
-.footer-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  justify-content: start;
 }
 
 .footer-section p {
@@ -627,22 +610,11 @@ footer {
   line-height: 1.5;
 }
 
-.footer-section a {
-  color: #979797;
-  text-decoration: none;
-  transition: all 0.5s ease-in;
-}
-
-.footer-section a:hover {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 0.875rem;
+  margin-top: 10px;
+  font-size: 1rem;
   padding: 20px 0;
-  text-align: center;
+  text-align: right;
 }
 
 .footer-bottom p {
@@ -650,36 +622,77 @@ footer {
   line-height: 1.5; 
 }
 
-.footer-bottom a {
-  color: #bebebe;
+.footer-content a, .footer-bottom a {
   text-decoration: none;
   transition: color 0.5s ease;
 }
 
 .footer-bottom a:hover {
-  color: #ffffff;
+  color: #008cff;
+}
+
+.footer-bottom a {
+  color: #bebebe;
 }
 
 .social-link {
-  display: block; /* Убедитесь, что ссылки занимают всю ширину контейнера */
-  position: relative; /* Для правильного позиционирования стрелки */
-  color: #f9f9f9;
+  display: row;
+  color: #008cff;
   text-decoration: none;
   margin: 5px 0;
-  overflow: hidden; /* Скрывает стрелку за пределами ссылки */
 }
 
-.arrow {
-  opacity: 0; /* Скрыть стрелку по умолчанию */
-  position: absolute; /* Абсолютное позиционирование относительно родителя */
-  top: 50%; /* Вертикальное центрирование относительно текста */
-  transform: translateY(-50%) translateX(30px); /* Начальная позиция стрелки за пределами видимой области */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное изменение прозрачности и перемещения */
+.social-link img {
+  width: 20px;
+  margin: 5px;
+  transition: all 0.6s ease;
 }
 
-.social-link:hover .arrow {
-  opacity: 1; /* Показать стрелку при наведении */
-  transform: translateY(-50%) translateX(0); /* Переместить стрелку к тексту при наведении */
+.HTML {
+  width: 30px;
+}
+
+.CSS {
+  width: 25px;
+}
+
+.JS {
+  width: 40px;
+}
+
+.HTML, .CSS, .JS {
+  margin: 10px;
+}
+
+.social-link img:hover {
+  transform: translateY(-5px);
+}
+
+.footer-section:hover > :not(:hover) {
+  opacity: 0.5;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 7px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+#scrollToTopBtn img {
+  width: 20px;
 }
 
 /* Анимации */
@@ -761,4 +774,44 @@ footer {
   to {
       transform: translateX(-50%);
   }
+}
+
+@keyframes aboutNis1 {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutNis2 {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Positions the line at the bottom of the text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #000000; /* Color of the underline */
+  transform: scaleX(0); /* Starts with no width */
+  transform-origin: bottom right; /* Ensures the line grows from right to left */
+  transition: transform 0.3s ease-in-out; /* Animation speed and easing */
+}
+
+.underline:hover::after {
+  transform: scaleX(1); /* Expands the line to full width */
+  transform-origin: bottom left; /* Ensures the line grows from left to right */
 }
