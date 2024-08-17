@@ -13,6 +13,10 @@
   color: rgb(0, 0, 0);
 }
 
+abbr {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -279,7 +283,6 @@ header {
   color: #333;
 }
 
-
 main {
   margin-top: 60px;
   padding: 20px;
@@ -291,12 +294,14 @@ main {
   flex-wrap: wrap; 
   gap: 20px;
   justify-content: center;
+  font-family: "Prata", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .news h1 {
   width: 100%;
   text-align: center;
-  font-family: 'Kanit', sans-serif;
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
@@ -305,19 +310,18 @@ main {
 .news-container {
   width: calc(33.333% - 20px);
   max-width: 300px;
+  flex-grow: 1;
+  flex-basis: 200;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  font-family: "Murecho", sans-serif;
-  font-weight: 700;
   text-align: center;
 }
 
 .news-container h3 {
   margin: 0 0 10px;
-  font-family: 'Kanit', sans-serif;
   font-size: 1.5rem;
   color: #333;
 }
@@ -489,7 +493,7 @@ main {
 .about-NIS {
   padding: 20px;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 10% 30% 10% 30%/30% 10% 30% 10%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   overflow: hidden;
@@ -510,6 +514,10 @@ main {
 .nis-content1, .nis-content2 {
   width: 48%;
   animation: aboutNis2 2s forwards;
+}
+
+.nis-content1 h1 {
+   text-align: center;
 }
 
 .nis-content2 {
@@ -808,8 +816,4 @@ footer {
 .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-abbr {
-  cursor: pointer;
 }

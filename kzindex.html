@@ -1,40 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8А</title>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/style1.css">
-    <!-- Иконка -->
+    <link rel="stylesheet" href="styles/style3.css">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <!-- Шрифты -->
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Kanit&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-
-    <title>8А</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Internal CSS -->
+    <style>
+    /* Styles for screens up to 768px */
+    @media (max-width: 425px) {
+  .beyim-synaq-img { display: none; }
+  .map { height: 30rem; width: 100%; }
+  .map-container { margin: 50px 0 20px; flex-direction: column; }
+  .kurator { width: 100%; height: auto; overflow: hidden; }
+  .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
+  .nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
+  .nis-content1 p, .nis-content2 p { font-size: 0.9em; }
+}
+
+@media (max-width: 600px) {
+  .kurator-content { flex-direction: column; }
+  .kurator { padding: 5px; }
+  .text-content h1 { font-size: 1.25rem; }
+  .additional-info { font-size: 0.7rem; }
+}
+
+@media (max-width: 768px) {
+  .menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
+  .menu.active { display: flex; }
+  .menu-toggle, .close-menu { display: flex; }
+  .menu a { text-align: center; margin: 10px 0; }
+  .language-dropdown { margin-left: 0; text-align: center; }
+  .NIS-logo, .logoo { display: none; }
+  .enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
+  .swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
+  .news-container { width: 100%; flex-direction: column; }
+  .beyim-synaq-img { max-width: 40rem; }
+  .facts { flex-direction: column; align-items: center; }
+  .fact { margin: 30px; }
+  .swiper-container { width: 100%; }
+  .kurator { padding: 10px; }
+  .kurator-content { gap: 10px; flex-direction: column; }
+  .text-content h1 { font-size: 1.5rem; }
+  .additional-info { font-size: 1rem; }
+  .about-NIS { border-radius: 8px; }
+  .nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
+  .nis-content1, .nis-content2 { margin: 0; width: 100%; }
+  .nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
+  .nis-content1 p, .nis-content2 p { font-size: 1em; text-align: center;}
+  .kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 1024px) {
+  .fact { margin: 20px; }
+}
+    </style>
 </head>
 <body>
     <header>
-        <nav class="menu" id="menu">
-            <a class="link-anim" href="#"><img src="./img/logo.png" alt="Logo"></a>
-            <a class="link-anim" href="https://ura.nis.edu.kz/"><img src="./img/NIS.png" alt="NIS"></a>
-            <a class="insta link-anim" href="https://www.instagram.com/7a_nis_ura/">Instagram</a>
-            <a class="tiktok link-anim" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1">TikTok</a>
+        <button class="menu-toggle" aria-label="Toggle navigation"><img src="./img/menu-burger.png" alt="menu burger"></button>
+        <nav class="menu" id="menu">  
+            <a class="link-anim logoo" href="#" target="_blank"><img src="./img/logo.png" alt="Logo"></a>
+            <a class="link-anim NIS-logo" href="https://ura.nis.edu.kz/" target="_blank"><img src="./img/NIS.png" alt="NIS"></a>
+            <a class="insta link-anim" href="https://www.instagram.com/7a_nis_ura/" target="_blank">Instagram</a>
+            <a class="tiktok link-anim" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">TikTok</a>
             <a class="whatsapp link-anim" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K">Whatsapp</a>
-            <a class="gis link-anim" href="https://go.2gis.com/8ifvs">2GIS</a>
+            <a class="gis link-anim" href="https://go.2gis.com/8ifvs" target="_blank">2GIS</a>
             <div id="language-menu" class="language-dropdown">
-                <button class="language-dropbtn ">Русский</button>
+                <button class="language-dropbtn">Қазақша</button>
                 <div class="language-dropdown-content">
-                    <a href="kzindex.html">Қазақ</a>
-                    <a href="enindex.html">English</a>
+                    <a class="kzindex-btn" href="index.html" target="_blank">Русский</a>
+                    <a class="enindex-btn" href="enindex.html" target="_blank">English</a>
                 </div>
+            </div>
         </nav>
         </div>
         <div class="swiper-container">
@@ -47,127 +115,159 @@
                 <div class="swiper-slide"><img src="./img/6img.jpeg" alt="Image 6"></div>
                 <div class="swiper-slide"><img src="./img/7img.jpeg" alt="Image 7"></div>
             </div>
-
             <div class="swiper-pagination"></div>
-            <div class="swiper-text-overlay">Мы не просто одноклассники, мы команда, каждый из нас — важная часть целого</div>
+            <div class="swiper-text-overlay">Сыныптастарымызбен бірге өткен әр күн – өмірдің ең құнды кезеңі</div>
         </div>
     </header>
     <main>
+        <article class="facts-h1 fade-in">
+            <h1 class="fact-h1 fade-in underline">Сыныбымыз туралы ақпарат</h1>
+        </article>
         <section class="facts">
             <div class="fact">
-                <h1>Учеников в нашем классе</h1>
+                <h1>Сыныбымыздағы оқушылар саны</h1>
                 <p class="number" data-end="32">0</p>
             </div>
             <div class="fact">
-                <h1>Отличников 2023-2024 года обучения</h1>
-                <p class="number" data-end="9">0</p>
+                <h1>23-24 оқу жылындағы үздік оқушылар саны</h1>
+                <p class="number" data-end="7">0</p>
             </div> 
             <div class="fact">
-                <h1>Количество предметов</h1>
+                <h1>Пәндер саны</h1>
                 <p class="number" data-end="14">0</p>
-            </div>      
+            </div>
             <div class="fact">
-                <h1>Количество достижений</h1>
-                    <p class="number" data-end="100">0</p>
+                <h1>Жетістіктер саны</h1>
+                <p class="number" data-end="100">0</p>
             </div>        
+        </section>        
+        <section class="news" id="news">
+            <h1>Жаңалықтар</h1>
+            <div class="news-container">
+                <h3>Футзалдан 3-орын</h3>
+                <h6>2023 жыл 11 қараша</h6>
+                <p>7-сынып оқушылары арасында футзалдаг сайыс өтті. Ойындар қызықты және күтпеген жағдайларға толы болды. Сайыс соңында ең мықты және бірлікті командалар анықталды.</p>
+                <a href="./news/1newsru.html">Толығырақ оқу</a>
+            </div>
+            <div class="news-container">
+                <h3>«Кітап-fest» жобасы</h3>
+                <h6>2024 жыл 26 ақпан</h6>
+                <p>2023-2024 оқу жылында Назарбаев Интеллектуалды Мектебінің оқушылары «Кітап-fest» жобасын 8 наурызға арнап әдебиеттегі әйелдер образдарына арнады.</p>
+                <a href="./news/2newsru.html">Толығырақ оқу</a>
+            </div>
+            <div class="news-container">
+                <h3>Дебаттардан 1-орын</h3>
+                <h6>2024 жыл 23 қаңтар</h6>
+                <p>7-сынып оқушылары арасында дебаттар өтті. Сайыс күтпеген жағдайлар мен қызықты сәттерге толы болды. Турнир нәтижесінде дәлелді пікірлер анықталды.</p>
+                <a href="./news/3newsru.html">Толығырақ оқу</a>
+            </div>
         </section>
-        <section class="news">
-            <h1>Новости</h1>
-            <div class="news-container">
-                <h3>3 место по футзалу среди мальчиков 7 класса</h3>
-                <p>11 ноября 2023 года соревнования по футзалу среди учеников 7 классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды. <a href="./news/1news.html">Читать дальше</a></p>
-            </div>
-            <div class="news-container">
-                <h3>3 место по футзалу среди мальчиков 7 класса</h3>
-                <p>11 ноября 2023 года соревнования по футзалу среди учеников 7 классов! Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды. <a href="./news/2news.html">Читать дальше</a></p>
-            </div>
-            <div class="news-container">
-                <h3>3 место по футзалу среди мальчиков 7 класса</h3>
-                <p>11 ноября 2023 года соревнования по футзалу среди учеников 7 классов! Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды. <a href="./news/3news.html">Читать дальше</a></p>
-            </div>
-        </section>
+        
         <section class="beyim-synaq">
-           <a href="https://synaq.beyim.ai/ru"><img src="./img/BeyimSynaqRU.png" alt="BeyimSynaq"></a>
+           <a href="https://synaq.beyim.ai/kz" target="_blank"><img class="beyim-synaq-img" src="./img/BeyimSynaqKZ.png" alt="BeyimSynaq"></a>
         </section>
         <article class="about-us fade-in">
             <div class="content">
-                <h1>О нас</h1>
+                <h1>Біз туралы</h1>
                 <p>
-                    Наш класс — это группа из 32 учеников 8-го класса НИШ. Мы характеризуемся дружелюбной и поддерживающей атмосферой, где каждый может раскрыть свои таланты. В нашем классе есть множество увлечений и интересов: от спортивных достижений и участия в олимпиадах до увлечений искусством и музыкой. Мы активно участвуем в школьных мероприятиях, что позволяет нам развиваться как в учебе, так и в творчестве. Наша дружеская атмосфера и взаимная поддержка помогают нам достигать высоких результатов и создавать приятную школьную среду. Наш класс отличает открытость к новым идеям и инициативам, а также умение работать в команде. В целом, мы — это сплоченный коллектив, который стремится к общим целям и поддерживает друг друга во всех начинаниях.
+                    Біз — жаңа білім мен жарқын әсерлерге дайын, құштар және мақсатты оқушылар тобымыз. Біз сынып ретінде бірлесе жұмыс істейтін қауымдастықты құраймыз, мұнда әркім жетістікке ұмтылып, бір-бірімізді мақсаттарға жету жолында қолдаймыз. Бізде достық пен өзара көмек рухы бар, бұл оқу процесін тек тиімді ғана емес, сонымен бірге жағымды етеді. Біз мектеп іс-шараларында, олимпиадалар мен конкурстарда белсенді қатысып, үздік нәтижелер көрсетіп, мектеп өміріне үлес қосуға тырысамыз. Біздің шанырак — Самұрық.
                 </p>
             </div>
-        </article>
+        </article>        
         <section class="marquee-container">
-            <div class="marquee">
-                <span>ВСТРЕЧАЙТЕ НАШЕГО КУРАТОРА</span>
-                <span>ВСТРЕЧАЙТЕ НАШЕГО КУРАТОРА</span>
-                <span>ВСТРЕЧАЙТЕ НАШЕГО КУРАТОРА</span>
-                <span>ВСТРЕЧАЙТЕ НАШЕГО КУРАТОРА</span>
+            <div class="marquee underline">
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
+                <span>БІЗДІҢ КУРАТОР</span>
             </div>
             <div class="animation">
                 <p>↓</p>
             </div>
             <article class="kurator">
                 <div class="kurator-content">
-                    <img src="./img/kurator.png" alt="Kurator">
+                    <img src="./img/kurator.png" alt="Куратор">
                     <div class="text-container">
                         <div class="text-content">
-                            <h1>Асемгуль Кадырболаткызы</h1>
-                            <p>Куратор 8А и 10С</p>
+                            <h1>Асемгүл Қадырболатқызы</h1>
+                            <p>8А және 10С сыныптарының кураторы</p>
                         </div>
                         <p class="additional-info">
-                            Очень добродушная и поддерживающая кураторша.
+                            Асемгүл Қадырболатқызы — 8А және 10С сыныптарының кураторы. Өз рөлінде ол білім беру процесін ұйымдастыруға, оқушыларға оқу және жеке мәселелерді шешуде көмек көрсетуге, сондай-ақ сыныпта жайлы және қолдау көрсететін атмосфера жасауға жауапты. Асемгүл Қадырболатқызы студенттерді жоғары нәтижелерге жетелеу және оларды академиялық және әлеуметтік салада табысты дамыту үшін белсенді жұмыс істейді.
                         </p>
                     </div>
                 </div>
             </article>
-            
         </section>
-        
         <article class="about-NIS">
-            <div class="nis-content1">
-                
+            <div class="nis-content-wrapper">
+                <div class="nis-content1 underline">
+                    <h1>НИШ деген не?</h1>
+                    <p>
+                        <abbr title="Назарбаев Зияткерлік Мектептері">НИШ</abbr> — Қазақстандағы білім беру мекемелерінің желісі, сапалы білім беруді және оқушыларды болашақ академиялық және кәсіби жетістіктерге дайындауды мақсат етеді.
+                    </p>
+                    <p>
+                        НИШ жоғары академиялық стандарттарға бағытталған және математика, жаратылыстану ғылымдары, гуманитарлық ғылымдар мен шетел тілдерін тереңдете оқытуды қамтиды. Білім беру процесіне инновациялық әдістемелер, заманауи технологиялар және халықаралық ынтымақтастық та енгізілген.
+                    </p>
+                    <a href="https://kk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B7%D0%B0%D1%80%D0%B1%D0%B0%D0%B5%D0%B2_%D0%97%D0%B8%D1%8F%D1%82%D0%BA%D0%B5%D1%80%D0%BB%D1%96%D0%BA_%D0%9C%D0%B5%D0%BA%D1%82%D0%B5%D0%BF%D1%82%D0%B5%D1%80%D1%96">
+                        <img src="./img/wikipedia.png" alt="wikipedia">
+                    </a>
+                </div>
+                <hr>
+                <div class="nis-content2 underline">
+                    <h2>Миссия</h2>
+                    <p>Интеллектуалды-креативті әлеуетті және бейімделгіш тұлғаның жаһандық құзыреттерін дамыту</p>
+                    <h2>Ұстаным</h2>
+                    <p>Мектеп жоғары сапалы білім беріп, оқушыларында моральдық қасиеттер, көшбасшылық және патриотизмді дамытуға ықпал етеді</p>
+                    <h2>Құндылықтар</h2>
+                    <p>Құрмет, Ашықтық, Патриотизм, Жауапкершілік, Еңбекқорлық, Шығармашылық, Адалдық, Отбасылық құндылықтар, дәстүрлер, Денсаулық, әл-ауқат, Жаһандық азаматтық</p>
+                </div>
             </div>
-            <div class="nis-content2">
-                NIS
-            </div>
-        </article>
+        </article>        
         <section class="map-container">
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1248.6063476257375!2d51.43024139881133!3d51.251993084785326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4171b142fc84de0f%3A0x8410e5e1f4b98189!2sNazarbayevskaya%20Intellektual&#39;naya%20Shkola%20Fiziko-Matematicheskogo%20Napravleniya!5e0!3m2!1skk!2skz!4v1722681781117!5m2!1skk!2skz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="info">
-                <h1>Наша школа</h1>
-                <p>Московская улица, 16, Уральск 090000</p>
+                <h1>Байланыс</h1>
+                <p>Орал қ, Тәуелсіздік көшесі, 16</p>
+                <p><a href="tel:87112246512">8 (7112) 24 65 12</a></p>
             </div>
         </section>
-          
     </main>
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h2>Контакты</h2>
-                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                <p>Телефон: +7 (123) 456-7890</p>
-            </div>
-            <div class="footer-section">
-                <h2>Нашли ошибку в сайте?</h2>
-                <p>Обратитесь к разработчику</p>
-                <p>Email: <a href="mailto:ruslanjr142@gmail.com">ruslanjr142@gmail.com</a></p>
-            </div>
-            <div class="footer-section">
-                <h2>Следите за нами</h2>
-                <a class="social-link" href="https://www.instagram.com/7a_nis_ura/" target="_blank">Instagram</a>
-                <a class="social-link" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">TikTok</a>
-                <a class="social-link" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K" target="_blank">Whatsapp Channel</a>
-                <a class="social-link" href="https://go.2gis.com/8ifvs" target="_blank">2GIS</a>
-            </div>
+          <div class="footer-section">
+            <a class="social-link" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">
+              <img src="./img/tik-tok.png" alt="tiktok logo">
+            </a>
+            <a class="social-link" href="https://www.instagram.com/7a_nis_ura/" target="_blank">
+              <img src="./img/instagram.png" alt="insta logo">
+            </a>
+            <a class="social-link" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K" target="_blank">
+              <img src="./img/whatsapp.png" alt="whatsapp logo">
+            </a>
+            <a class="social-link" href="https://github.com/MirasRuslanJR/8A-Project" target="_blank">
+              <img src="./img/github.png" alt="github logo">
+            </a>
+          </div>
+          
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 8А. Все права защищены.</p>
+          <p><a href="https://github.com/MirasRuslanJR">MirasRuslanJR</a> жасалған</p>
+          <img class="HTML" src="./img/html5.png" alt="HTML"> <img class="CSS" src="./img/css3.png" alt="CSS"><img class="JS" src="./img/js.png" alt="JS">
+          <p><a href="tel:87761539768">8 (7761) 53 97 68</a></p>
+          <p><a href="mailto:ruslanjr142@gmail.com">ruslanjr142@gmail.com</a></p>
         </div>
-    </footer>
-    
+        <button id="scrollToTopBtn"><img src="./img/chevron-double-up.png" alt="doubleup"></button>
+      </footer>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 <script src="scripts/script1.js" defer></script>
