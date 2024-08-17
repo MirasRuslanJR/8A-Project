@@ -33,23 +33,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("menu").style.top = "0";
-  } else {
-    document.getElementById("menu").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-}
 
 window.addEventListener('scroll', function() {
+    var currentScrollPos = window.pageYOffset;
     const menu = document.getElementById('menu');
+    
+    if (prevScrollpos > currentScrollPos) {
+        menu.style.top = "0";
+    } else {
+        menu.style.top = "-100px";
+    }
+    
     if (window.scrollY > 350) {
         menu.classList.add('scrolled');
     } else {
         menu.classList.remove('scrolled');
     }
+    
+    prevScrollpos = currentScrollPos;
 });
 
 document.addEventListener('DOMContentLoaded', function () {

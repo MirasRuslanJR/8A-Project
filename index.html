@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your website description here">
-    <meta name="keywords" content="keyword1, keyword2, keyword3">
     <title>8А</title>
 
     <!-- CSS -->
@@ -28,71 +26,52 @@
     <!-- Internal CSS -->
     <style>
     /* Styles for screens up to 768px */
-    @media (max-width: 768px) {
-  .menu { display: none; flex-direction: column; background-color: #333; }
+    @media (max-width: 425px) {
+  .beyim-synaq-img { display: none; }
+  .map { height: 30rem; width: 100%; }
+  .map-container { margin: 50px 0 20px; flex-direction: column; }
+  .kurator { width: 100%; height: auto; overflow: hidden; }
+  .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
+  .nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
+  .nis-content1 p, .nis-content2 p { font-size: 0.9em; }
+}
+
+@media (max-width: 600px) {
+  .kurator-content { flex-direction: column; }
+  .kurator { padding: 5px; }
+  .text-content h1 { font-size: 1.25rem; }
+  .additional-info { font-size: 0.7rem; }
+}
+
+@media (max-width: 768px) {
+  .menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
   .menu.active { display: flex; }
-  .menu-toggle { display: flex; }
-  .close-menu { display: block; }
+  .menu-toggle, .close-menu { display: flex; }
   .menu a { text-align: center; margin: 10px 0; }
   .language-dropdown { margin-left: 0; text-align: center; }
   .NIS-logo, .logoo { display: none; }
   .enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
   .swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
-  .news-container { width: calc(50% - 20px); flex-direction: column;}
+  .news-container { width: 100%; flex-direction: column; }
   .beyim-synaq-img { max-width: 40rem; }
   .facts { flex-direction: column; align-items: center; }
   .fact { margin: 30px; }
   .swiper-container { width: 100%; }
-  .kurator img:hover { margin-left: -15px; }
-
-  .nis-content-wrapper {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nis-content1, .nis-content2 {
-    margin: 0;
-    width: 100%;
-  }
-
-  .nis-content1 h1, .nis-content2 h2 {
-    font-size: 1.5em;
-  }
-
-  .nis-content1 p, .nis-content2 p {
-    font-size: 1em;
-  }
+  .kurator { padding: 10px; }
+  .kurator-content { gap: 10px; flex-direction: column; }
+  .text-content h1 { font-size: 1.5rem; }
+  .additional-info { font-size: 1rem; }
+  .nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
+  .nis-content1, .nis-content2 { margin: 0; width: 100%; }
+  .nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
+  .nis-content1 p, .nis-content2 p { font-size: 1em; }
+  .kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
 }
 
-/* Стили для экранов до 425px */
-@media (max-width: 425px) {
-  .news-container { width: 100%; flex-direction: column;}
-  .beyim-synaq-img { display: none; }
-  .map { height: 30rem; width: 100%; }
-  .map-container { margin-top: 50px; margin-bottom: 20px; flex-direction: column; }
-  .kurator { width: 100%; height: auto; overflow: hidden; }
-  .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
-
-  .nis-content1 h1, .nis-content2 h2 {
-    font-size: 1.2em;
-  }
-
-  .nis-content1 p, .nis-content2 p {
-    font-size: 0.9em;
-  }
-}
-
-/* Стили для экранов до 600px */
-@media (max-width: 600px) {
-  .kurator-content { flex-direction: column; }
-}
-
-/* Стили для экранов до 1024px */
 @media (max-width: 1024px) {
   .fact { margin: 20px; }
-  .kurator img:hover { margin-left: -15px; }
 }
+
     </style>
 </head>
 <body>
@@ -103,7 +82,7 @@
             <a class="link-anim NIS-logo" href="https://ura.nis.edu.kz/" target="_blank"><img src="./img/NIS.png" alt="NIS"></a>
             <a class="insta link-anim" href="https://www.instagram.com/7a_nis_ura/" target="_blank">Instagram</a>
             <a class="tiktok link-anim" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">TikTok</a>
-            <a class="whatsapp link-anim" href="">Instagram</a>
+            <a class="whatsapp link-anim" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K">Whatsapp</a>
             <a class="gis link-anim" href="https://go.2gis.com/8ifvs" target="_blank">2GIS</a>
             <div id="language-menu" class="language-dropdown">
                 <button class="language-dropbtn">Русский</button>
@@ -144,29 +123,32 @@
             <div class="fact">
                 <h1>Количество предметов</h1>
                 <p class="number" data-end="14">0</p>
-            </div>      
+            </div>
             <div class="fact">
                 <h1>Количество достижений</h1>
-                    <p class="number" data-end="100">0</p>
+                <p class="number" data-end="100">0</p>
             </div>        
         </section>
         <section class="news" id="news">
             <h1>Новости</h1>
             <div class="news-container">
-                <h3>3 место по футзалу среди 7 классников</h3>
-                <p>11 ноября 2023 года состоялась соревнования по футзалу среди учеников 7-ых классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды.</p>
+                <h3>3 место по футзалу</h3>
+                <h6>11 ноября 2023 года</h6>
+                <p>Состоялась соревнования по футзалу среди учеников 7-ых классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды.</p>
                 <a href="./news/1newsru.html">Читать дальше</a>
             </div>
             <div class="news-container">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh vitae augue ullamcorper laoreet. Sed euismod malesuada erat ac hendrerit. Ut ante ipsum, convallis quis rutrum nec, maximus id ante. Integer consectetur quam odio, in semper tortor feugiat sed. Pellentesque non ornare justo.</p>
-                <a href="./news/2newsru.html">Читать дальше</a>
-            </div>
-            <div class="news-container">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh vitae augue ullamcorper laoreet. Sed euismod malesuada erat ac hendrerit. Ut ante ipsum, convallis quis rutrum nec, maximus id ante. Integer consectetur quam odio, in semper tortor feugiat sed. Pellentesque non ornare justo.</p>
-                <a href="./news/3newsru.html">Читать дальше</a>      
-              </div>
+              <h3>Проект «Кітап-fest»</h3>
+              <h6>26 февраля 2024 года</h6>
+              <p>В учебном году 23-24 учащиеся Назарбаевской Интеллектуальной Школы решили посвятить «Кітап-fest» произведениям, посвященным образам женщин в художественной литературе в честь 8 марта.</p>
+              <a href="./news/2newsru.html">Читать дальше</a>
+          </div>
+          <div class="news-container">
+            <h3></h3>
+            <h6>11 ноября 2023 года</h6>
+            <p>Состоялась соревнования по футзалу среди учеников 7-ых классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды.</p>
+            <a href="./news/3newsru.html">Читать дальше</a>
+        </div>
         </section>
         <section class="beyim-synaq">
            <a href="https://synaq.beyim.ai/ru" target="_blank"><img class="beyim-synaq-img" src="./img/BeyimSynaqRU.png" alt="BeyimSynaq"></a>
@@ -175,12 +157,12 @@
             <div class="content">
                 <h1>О нас</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nibh vitae augue ullamcorper laoreet. Sed euismod malesuada erat ac hendrerit. Ut ante ipsum, convallis quis rutrum nec, maximus id ante. Integer consectetur quam odio, in semper tortor feugiat sed. Pellentesque non ornare justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et massa massa. Ut est lacus, suscipit quis arcu eget, dignissim gravida dolor. Ut ut risus et metus tristique vestibulum. Mauris imperdiet vel magna ut vehicula.
+                  Мы — группа увлеченных и целеустремленных учеников, готовых к новым знаниям и ярким впечатлениям. Наш класс представляет собой сплоченное сообщество, где каждый стремится к успеху и поддерживает друг друга на пути к достижению целей. В нашем классе царит дух дружбы и взаимопомощи, что делает учебный процесс не только эффективным, но и приятным. Мы активно участвуем в школьных мероприятиях, олимпиадах и конкурсах, стремясь показать лучшие результаты и внести свой вклад в жизнь школы. Наш шанырак - Самурук. 
                 </p>
             </div>
         </article>
         <section class="marquee-container">
-            <div class="marquee">
+            <div class="marquee underline">
                 <span>НАШ КУРАТОР</span>
                 <span>НАШ КУРАТОР</span>
                 <span>НАШ КУРАТОР</span>
@@ -205,7 +187,7 @@
                             <p>Куратор 8А и 10С</p>
                         </div>
                         <p class="additional-info">
-                            Асемгуль Кадырболаткызы - куратор НИШ классов 8А и 10С. 
+                          Асемгуль Кадырболаткызы — куратор НИШ классов 8А и 10С. В своей роли она отвечает за организацию образовательного процесса, помощь учащимся в решении учебных и личных вопросов, а также за создание комфортной и поддерживающей атмосферы в классе. Асемгуль Кадырболаткызы активно работает над тем, чтобы направлять и мотивировать студентов к достижению высоких результатов, способствуя их успешному развитию как в академической, так и в социальной сфере.
                         </p>
                     </div>
                 </div>
@@ -217,7 +199,7 @@
               <div class="nis-content1 underline">
                 <h1>Что такое НИШ?</h1>
                 <p>
-                  НИШ (Назарбаевская Интеллектуальная Школа) — это сеть образовательных учреждений в Казахстане, созданных для предоставления качественного образования и подготовки учеников к будущим академическим и профессиональным достижениям.
+                  <abbr title="Назарбаевская Интеллектуальная Школа">НИШ</abbr> — это сеть образовательных учреждений в Казахстане, созданных для предоставления качественного образования и подготовки учеников к будущим академическим и профессиональным достижениям.
                 </p>
                 <p>
                   НИШ нацелены на высокие академические стандарты и включают углубленное изучение предметов, таких как математика, естественные науки, гуманитарные науки и иностранные языки. В образовательный процесс также включены инновационные методики, современные технологии и международное сотрудничество.

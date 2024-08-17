@@ -1,11 +1,11 @@
 * {
-  scrollbar-width: none; /* Для Firefox */
-  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   box-sizing: border-box;
 }
 
 *::-webkit-scrollbar {
-  display: none; /* Для Chrome, Safari и Opera */
+  display: none;
 }
 
 ::selection {
@@ -18,8 +18,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
-/* Header styling */
 header {
   position: relative;
   width: 100%;
@@ -43,7 +41,6 @@ header {
   width: 30px;
 }
 
-/* Стили для ссылок и изображений в меню */
 .menu img {
   height: 40px;
   width: auto;
@@ -67,7 +64,6 @@ header {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Стили для выбора языка */
 .language-dropdown {
   position: relative;
   display: inline-block;
@@ -124,17 +120,16 @@ header {
   display: block;
 }
 
-/* Стили для кнопки меню и адаптивное поведение */
 .menu-toggle {
   display: none;
   position: absolute;
-  top: 20px; /* Расположение сверху */
-  left: 20px; /* Расположение слева */
-  width: 40px; /* Размер кнопки */
-  height: 40px; /* Размер кнопки */
-  background: none; /* Удалить фон */
-  font-size: 24px; /* Размер шрифта для иконки */
-  color: white; /* Цвет текста или иконки */
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  font-size: 24px;
+  color: white;
   border: none;
   cursor: pointer;
   z-index: 10;
@@ -142,19 +137,12 @@ header {
 }
 
 .menu.active {
-  transform: translateX(0); /* Меню появляется */
+  transform: translateX(0);
 }
 
 .close-menu {
-  position: absolute; /* Абсолютное позиционирование для размещения справа */
-  top: 20px; /* Расположение сверху */
-  right: 20px; /* Расположение справа */
-  font-size: 24px; /* Размер шрифта для иконки */
-  color: white; /* Цвет иконки */
-  background: none; /* Удаление фона */
-  border: none; /* Удаление границы */
-  cursor: pointer; /* Курсор при наведении */
-  z-index: 11;
+  background: none;
+  border: none;
 }
 
 .insta:hover {
@@ -293,47 +281,40 @@ header {
 
 
 main {
-  margin-top: 60px; /* чтобы контент не перекрывал хедер */
+  margin-top: 60px;
   padding: 20px;
 }
 
-/* Стили для секции новостей */
 .news {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap; /* Позволяет контейнерам переноситься на следующую строку при нехватке места */
-  gap: 20px; /* Расстояние между элементами */
-  justify-content: center; /* Центрирование элементов по горизонтали */
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Заголовок секции новостей */
 .news h1 {
-  width: 100%; /* Заголовок занимает всю ширину секции */
-  text-align: center; /* Выравнивание заголовка по центру */
-  font-family: 'Kanit', sans-serif; /* Шрифт для заголовка */
-  font-size: 2rem; /* Размер шрифта */
-  color: #333; /* Цвет заголовка */
-  margin-bottom: 20px; /* Отступ снизу */
+  width: 100%;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Контейнеры новостей */
 .news-container {
-  width: calc(33.333% - 20px); /* Ширина для трех элементов в ряд с учетом отступов */
-  max-width: 300px; /* Максимальная ширина контейнера */
+  width: calc(33.333% - 20px);
+  max-width: 300px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-sizing: border-box;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   font-family: "Murecho", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
   text-align: center;
 }
 
-/* Стили для заголовка новости */
 .news-container h3 {
   margin: 0 0 10px;
   font-family: 'Kanit', sans-serif;
@@ -341,18 +322,39 @@ main {
   color: #333;
 }
 
-/* Стили для текста новости */
 .news-container p {
-  margin: 0;
-  font-size: 1rem; /* Размер шрифта */
-  color: #666; /* Цвет текста */
-  line-height: 1.6; /* Высота строки для удобочитаемости */
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }
 
-/* Эффект при наведении на контейнер новости */
 .news-container:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
+}
+
+.news-container a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.news-container a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.news-container h6 {
+  margin: 10px 0;
+  font-size: 0.875rem;
+  color: #999;
 }
 
 .beyim-synaq{
@@ -372,15 +374,15 @@ main {
 }
 
 .about-us {
-  margin-top: 50px; /* Удалите отступы */
-  padding: 15px; /* Внутренние отступы */
-  width: 100vw; /* Ширина на весь viewport */
-  background-color: #67c2ff; /* Цвет фона */
-  box-sizing: border-box; /* Учитывать паддинги и бордеры */
-  position: relative; /* Это может помочь в некоторых случаях с позиционированием */
-  left: 50%; /* Перемещаем влево на 50% */
-  right: 50%; /* Перемещаем вправо на 50% */
-  margin-left: -50vw; /* Корректируем смещение */
+  margin-top: 50px; 
+  padding: 15px;
+  width: 100vw;
+  background-color: #67c2ff;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%; 
+  right: 50%;
+  margin-left: -50vw;
   margin-right: -50vw; 
   font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
@@ -388,17 +390,16 @@ main {
   font-style: normal;
 }
 
-/* Внутренние элементы */
 .content {
-  width: 100%; /* Ширина контента на всю доступную ширину */
-  max-width: 1200px; /* Максимальная ширина, если требуется */
+  width: 100%; 
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .about-us h1 {
-  font-size: 32px; /* Размер шрифта для заголовка */
-  color: #222; /* Цвет текста для заголовка */
-  margin-bottom: 15px; /* Отступ снизу, чтобы отделить заголовок от абзаца */
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 15px;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
@@ -428,28 +429,41 @@ main {
 }
 
 .kurator {
-  background-color: #e6e3e3; /* Цвет фона */
-  padding: 15px; /* Внутренние отступы */
-  border-radius: 10px; /* Закругление углов */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-  max-width: 1200px; /* Максимальная ширина контейнера */
-  text-align: left; /* Выравнивание текста по левому краю */
-  opacity: 0; /* Скрыто по умолчанию */
-  max-height: 0; /* Начальная высота */
-  overflow: hidden; /* Прячет содержимое за пределами элемента */
-  transition: opacity 0.5s ease, max-height 0.5s ease; /* Плавный переход */
-  display: grid; /* Используем сетку */
-  place-items: center; /* Центрирование содержимого */
-  width: 100%; /* Ширина на весь контейнер */
-  margin: 50px auto 0;
-  margin-bottom: 30px; /* Центрирование блока по горизонтали и отступ сверху */
-  box-sizing: border-box; /* Учитывать паддинги и бордеры */
+  background-color: #e6e3e3;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  text-align: left;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 50px auto 30px;
+  box-sizing: border-box;
 }
 
-
 .kurator.show {
-  opacity: 1; /* Видимый блок */
-  max-height: 600px; /* Максимальная высота для отображения */
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.kurator img {
+  border-radius: 10px 0 0 10px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: margin-left 0.5s ease;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .kurator-content {
@@ -457,39 +471,19 @@ main {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
+  text-align: center;
   font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
-.kurator img {
-  border-radius: 10px 0 0 10px;
-  max-width: 100%; /* Адаптивная ширина изображения */
-  height: 100%;
-  margin-left: -15px;
-  margin-top: -15px;
-  margin-bottom: -15px;
-  object-fit: cover;
-  transition: margin-left 0.5s ease;
-}
-
-.kurator img:hover {
-  margin-left: -210px;
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column; /* Вертикальное размещение текста */
-  justify-content: center; /* Центрирование текста по вертикали */
-}
-
 .text-content {
-  margin-bottom: 10px; /* Отступ между основным и дополнительным текстом */
+  margin-bottom: 10
 }
 
 .additional-info {
-  margin-top: 10px; /* Отступ сверху для дополнительного текста */
+  margin-top: 10px;
 }
 
 .about-NIS {
@@ -529,9 +523,9 @@ main {
 }
 
 .map-container {
-  display: flex; /* Используем Flexbox для размещения элементов по бокам */
+  display: flex;
   width: 100%;
-  height: 50vh; /* Высота секции на весь видимый экран */
+  height: 50vh;
   padding: 0;
   margin: 0;
   margin-top: 20px;
@@ -539,11 +533,11 @@ main {
   font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;/* Убедитесь, что padding и border включены в ширину и высоту */
+  font-style: normal;
 }
 
 .map-container .map {
-  flex: 2; /* Карта занимает большую часть ширины секции */
+  flex: 2;
 }
 
 .map-container .info {
@@ -725,11 +719,11 @@ footer {
 }
 
 .fade-in.visible {
-  animation: fadeIn 0.5s ease-out forwards; /* Animation for entering view */
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 .fade-in.not-visible {
-  animation: fadeOut 0.5s ease-out forwards; /* Animation for exiting view */
+  animation: fadeOut 0.5s ease-out forwards;
 }
 
 @keyframes anim-box {
@@ -748,7 +742,7 @@ footer {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: #f0f0f0; /* Можно изменить цвет фона */
+  background: #f0f0f0;
 }
 
 .marquee {
@@ -801,17 +795,21 @@ footer {
 .underline::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Positions the line at the bottom of the text */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background-color: #000000; /* Color of the underline */
-  transform: scaleX(0); /* Starts with no width */
-  transform-origin: bottom right; /* Ensures the line grows from right to left */
-  transition: transform 0.3s ease-in-out; /* Animation speed and easing */
+  height: 2px;
+  background-color: #000000;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
 }
 
 .underline:hover::after {
-  transform: scaleX(1); /* Expands the line to full width */
-  transform-origin: bottom left; /* Ensures the line grows from left to right */
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+abbr {
+  cursor: pointer;
 }
