@@ -25,67 +25,6 @@
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <!-- Internal CSS -->
-    <style>
-    /* Styles for screens up to 768px */
-    @media (max-width: 425px) {
-  .beyim-synaq-img { display: none; }
-  .map { height: 30rem; width: 100%; }
-  .map-container { margin: 50px 0 20px; flex-direction: column; }
-  .kurator { width: 100%; height: auto; overflow: hidden; }
-  .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
-  .nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
-  .nis-content1 p, .nis-content2 p { font-size: 0.9em; }
-}
-
-@media (max-width: 600px) {
-  .kurator-content { flex-direction: column; }
-  .kurator { padding: 5px; }
-  .text-content h1 { font-size: 1.25rem; }
-  .additional-info { font-size: 0.7rem; }
-}
-
-@media (max-width: 768px) {
-  .menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
-  .menu.active { display: flex; }
-  .menu-toggle, .close-menu { display: flex; }
-  .menu a { text-align: center; margin: 10px 0; }
-  .language-dropdown { margin-left: 0; text-align: center; }
-  .NIS-logo, .logoo { display: none; }
-  .enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
-  .swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
-  .news-container { width: 100%; flex-direction: column; }
-  .beyim-synaq-img { max-width: 40rem; }
-  .facts { flex-direction: column; align-items: center; }
-  .fact { margin: 30px; }
-  .swiper-container { width: 100%; }
-  .kurator { padding: 10px; }
-  .kurator-content { gap: 10px; flex-direction: column; }
-  .text-content h1 { font-size: 1.5rem; }
-  .additional-info { font-size: 1rem; }
-  .about-NIS { border-radius: 8px; }
-  .nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
-  .nis-content1, .nis-content2 { margin: 0; width: 100%; }
-  .nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
-  .nis-content1 p, .nis-content2 p { font-size: 1em; text-align: center;}
-  .kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
-}
-
-@media (max-width: 1024px) {
-  .fact { margin: 20px; }
-}
-
-.marquee {
-  display: flex;
-  width: 200%;
-  animation: marquee 15s linear infinite;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-    </style>
 </head>
 <body>
     <header>
@@ -269,6 +208,67 @@
         <button id="scrollToTopBtn"><img src="./img/chevron-double-up.png" alt="doubleup"></button>
       </footer>
 </body>
+<style>
+  /* Адаптция */
+  @media (max-width: 425px) {
+.beyim-synaq-img { display: none; }
+.map { height: 30rem; width: 100%; }
+.map-container { margin: 50px 0 20px; flex-direction: column; }
+.kurator { width: 100%; height: auto; overflow: hidden; }
+.kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
+.nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
+.nis-content1 p, .nis-content2 p { font-size: 0.9em; }
+}
+
+@media (max-width: 600px) {
+.kurator-content { flex-direction: column; }
+.kurator { padding: 5px; }
+.text-content h1 { font-size: 1.25rem; }
+.additional-info { font-size: 0.7rem; }
+}
+
+@media (max-width: 768px) {
+.menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
+.menu.active { display: flex; }
+.menu-toggle, .close-menu { display: flex; }
+.menu a { text-align: center; margin: 10px 0; }
+.language-dropdown { margin-left: 0; text-align: center; }
+.NIS-logo, .logoo { display: none; }
+.enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
+.swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
+.news-container { width: 100%; flex-direction: column; }
+.beyim-synaq-img { max-width: 40rem; }
+.facts { flex-direction: column; align-items: center; }
+.fact { margin: 30px; }
+.swiper-container { width: 100%; }
+.kurator { padding: 10px; }
+.kurator-content { gap: 10px; flex-direction: column; }
+.text-content h1 { font-size: 1.5rem; }
+.additional-info { font-size: 1rem; }
+.about-NIS { border-radius: 8px; }
+.nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
+.nis-content1, .nis-content2 { margin: 0; width: 100%; }
+.nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
+.nis-content1 p, .nis-content2 p { font-size: 1em; text-align: center;}
+.kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
+.swiper-slide img {filter: brightness(100%);}
+}
+
+@media (max-width: 1024px) {
+.fact { margin: 20px; }
+}
+
+/* Github fixes */
+
+.marquee {
+display: flex;
+width: 200%;
+animation: marquee 15s linear infinite;
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: italic;
+}
+  </style>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 <script src="scripts/script1.js" defer></script>
 </html>
