@@ -753,15 +753,6 @@ footer {
   background: #f0f0f0;
 }
 
-.marquee {
-  display: flex;
-  width: 200%;
-  animation: marquee 15s linear infinite;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
 .marquee span {
   flex: 1;
   white-space: nowrap;

@@ -3,159 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Событие по футзалу среди учеников 7-ых классов, занявших 3 место.">
-    <meta name="keywords" content="футзал, соревнования, 7 классы, спорт">
     <title>3 место по футзалу</title>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/news-styles/style-news1RU.css">
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Kanit&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+    <!-- Адаптация -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        h6 {
-            color: #666;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .img-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        .results, .play-off {
-            margin: 20px 0;
-        }
-        .results h2, .play-off h2 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        .results table, .play-off table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .results table, .play-off table, .results th, .play-off th, .results td, .play-off td {
-            border: 1px solid #ddd;
-        }
-        .results th, .play-off th, .results td, .play-off td {
-            padding: 10px;
-            text-align: center;
-        }
-        .results th, .play-off th {
-            background-color: #007bff;
-            color: #fff;
-        }
+    @media (max-width: 768px) {
+        .menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
+        .menu.active { display: flex; }
+        .menu-toggle, .close-menu { display: flex; }
+        .menu a { text-align: center; margin: 10px 0; } 
+        .language-dropdown { margin-left: 0; text-align: center; }
+        .NIS-logo, .logoo { display: none; }
+        .enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
+        .scrolled { display: none; }
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>3 место по футзалу</h1>
-        <h6>11 ноября 2023 года</h6>
-        <div class="img-container">
-            <img src="../img/futsal.jpeg" alt="Учащиеся играют в футзал">
+    <header>
+        <button class="menu-toggle" aria-label="Toggle navigation"><img src="../img/menu-burger.png" alt="menu burger"></button>
+        <nav class="menu" id="menu">  
+            <a class="link-anim logoo" href="#" target="_blank"><img src="../img/logo.png" alt="Logo"></a>
+            <a class="link-anim NIS-logo" href="https://ura.nis.edu.kz/" target="_blank"><img src="../img/NIS.png" alt="NIS"></a>
+            <a class="insta link-anim" href="https://www.instagram.com/7a_nis_ura/" target="_blank">Instagram</a>
+            <a class="tiktok link-anim" href="https://www.tiktok.com/@7a.nis.uralsk?_t=8oS0T1DQVML&_r=1" target="_blank">TikTok</a>
+            <a class="whatsapp link-anim" href="https://whatsapp.com/channel/0029Vae4MNF3AzNXpOThX71K">Whatsapp</a>
+            <a class="gis link-anim" href="https://go.2gis.com/8ifvs" target="_blank">2GIS</a>
+            <div id="language-menu" class="language-dropdown">
+                <button class="language-dropbtn">Русский</button>
+                <div class="language-dropdown-content">
+                    <a class="kzindex-btn" href="kzindex.html" target="_blank">Қазақша</a>
+                    <a class="enindex-btn" href="enindex.html" target="_blank">English</a>
+                </div>
+            </div>
+        </nav>
         </div>
-        <p>Состоялись соревнования по футзалу среди учеников 7-ых классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды.</p>
-        
-        <!-- Результаты соревнований -->
-        <div class="results">
-            <h2>Результаты соревнований</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Место</th>
-                        <th>Команда</th>
-                        <th>Побед</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>7D</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>7A</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>7F</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
+    </header>
+    <main>
+        <section class="container">
+            <h1>3 место по футзалу</h1>
+            <h6>11 ноября 2023 года</h6>
+            <article class="img-container">
+                <img src="../img/futsal.jpeg" alt="Учащиеся играют в футзал">
+            </article>
+            <p>Состоялись соревнования по футзалу среди учеников 7-ых классов. Гонка была полна интригующими и неожиданными поворотами. Тем не менее, по окончанию соревнований были определены самые сильные и самые сплоченные команды. 1 место - 7С класс, 2 место - 7В класс, 3 место - 7А класс также 7Д , 7Е, 7F классы были награждены благодарственными письмами за активное участие.</p>
+            <div class="results">
+                <h2>Резуль*таты соревнований</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Команда</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>7C</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>7B</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="7a">7A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Плей-офф -->
+            <div class="play-off">
+                <h2>Плей-офф</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Команда 1</th>
+                            <th>Команда 2</th>
+                            <th>Результат</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7D</td>
+                            <td>7C</td>
+                            <td>0:1</td>
+                        </tr>
+                        <tr>
+    
+                            <td>7A</td>
+                            <td>7B</td>
+                            <td>0:1</td>
+                        </tr>
+                        <tr>
+                            <td>7C</td>
+                            <td>7B</td>
+                            <td>0:0 (1:0)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="../index.html">Вернуться на главную</a>
         </div>
-        
-        <!-- Плей-офф -->
-        <div class="play-off">
-            <h2>Плей-офф</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Раунд</th>
-                        <th>Команда 1</th>
-                        <th>Команда 2</th>
-                        <th>Результат</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1/4 финала</td>
-                        <td>7D</td>
-                        <td>7C</td>
-                        <td>2:0</td>
-                    </tr>
-                    <tr>
-                        <td>1/4 финала</td>
-                        <td>7A</td>
-                        <td>7B</td>
-                        <td>1:1 (4:3 по пенальти)</td>
-                    </tr>
-                    <tr>
-                        <td>1/2 финала</td>
-                        <td>7D</td>
-                        <td>7A</td>
-                        <td>1:1 (5:4 по пенальти)</td>
-                    </tr>
-                    <tr>
-                        <td>Финал</td>
-                        <td>7D</td>
-                        <td>7E</td>
-                        <td>2:1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <a href="index.html">Вернуться на главную</a>
-    </div>
+    </main>
 </body>
+<script src="../scripts/script-news.js"></script>
 </html>
