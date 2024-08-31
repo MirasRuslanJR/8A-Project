@@ -2,6 +2,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   box-sizing: border-box;
+  cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1537.cur), auto;
 }
 
 *::-webkit-scrollbar {
@@ -13,8 +14,8 @@
   color: rgb(0, 0, 0);
 }
 
-abbr {
-  cursor: pointer;
+img {
+  pointer-events: none;
 }
 
 body {
@@ -137,7 +138,6 @@ header {
   border: none;
   cursor: pointer;
   z-index: 10;
-
 }
 
 .menu.active {
@@ -174,22 +174,27 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-80%, 0%);
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   z-index: 5;
   font-family: "Bona Nova SC", serif;
-  font-weight: 400;
   font-style: normal;
+  animation: animate 15s ease infinite;
   transition: all 300ms ease;
 }
 
 .swiper-text-overlay:hover {
   transform: translate(-50%, -50%) scale(1.2);
+  background-clip: text;
+  -webkit-background-clip: text; 
   text-shadow: none;
-  color: aqua;
+  color: transparent;
+  font-weight: 700;
+  background-image: linear-gradient(45deg, aqua, blue, Magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+  background-size: 400% 400%;
 }
 
 .swiper-wrapper {
@@ -645,9 +650,14 @@ footer {
 }
 
 .social-link img {
-  width: 20px;
-  margin: 5px;
-  transition: all 0.6s ease;
+  width: 24px; /* Размер иконок */
+  height: auto; /* Соотношение сторон */
+  margin: 0 8px; /* Отступы между иконками */
+  transition: transform 0.3s ease; /* Переход для анимации */
+}
+
+.social-link:hover img {
+  transform: translateY(-5px); /* Эффект подъема при наведении */
 }
 
 .HTML {
@@ -664,10 +674,6 @@ footer {
 
 .HTML, .CSS, .JS {
   margin: 10px;
-}
-
-.social-link img:hover {
-  transform: translateY(-5px);
 }
 
 .footer-section:hover > :not(:hover) {
@@ -807,4 +813,22 @@ footer {
 .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

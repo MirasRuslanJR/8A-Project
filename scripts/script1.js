@@ -20,13 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.querySelector('.menu');
 
     menuToggle.addEventListener('click', function() {
-        menu.classList.add('active'); // Открытие меню
+        menu.classList.add('active');
     });
 
-    // Закрытие меню при клике вне его области
     document.addEventListener('click', function(event) {
         if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.remove('active'); // Закрытие меню при клике вне его области
+            menu.classList.remove('active');
         }
     });
 });
@@ -59,17 +58,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7 // Visibility level at which the animation triggers
+        threshold: 0.7
     };
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible'); // Add class to trigger the fade-in animation
-                entry.target.classList.remove('not-visible'); // Remove class for fade-out
+                entry.target.classList.add('visible');
+                entry.target.classList.remove('not-visible');
             } else {
-                entry.target.classList.add('not-visible'); // Add class to trigger the fade-out animation
-                entry.target.classList.remove('visible'); // Remove class for fade-in
+                entry.target.classList.add('not-visible');
+                entry.target.classList.remove('visible');
             }
         });
     };
@@ -77,13 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     fadeInElements.forEach(element => {
-        observer.observe(element); // Start observing the elements
+        observer.observe(element);
     });
 });
 
-
-
-// Функция анимации числа
 function animateNumber(element, start, end, duration) {
     let startTime = null;
 
@@ -104,26 +100,22 @@ function animateNumber(element, start, end, duration) {
     requestAnimationFrame(step);
 }
 
-// Функция для запуска анимаций, когда элемент становится видимым
 function startAnimations(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const element = entry.target;
             const end = parseInt(element.getAttribute('data-end'), 10);
-            const duration = 2000; // Продолжительность анимации в миллисекундах
+            const duration = 2000;
             animateNumber(element, 0, end, duration);
-            // Отменяем наблюдение после завершения анимации
             observer.unobserve(element);
         }
     });
 }
 
-// Создаем наблюдатель для элементов
 const observer = new IntersectionObserver(startAnimations, {
-    threshold: 0.7 // Элемент считается видимым, когда 50% его площади видно
+    threshold: 0.7
 });
 
-// Добавляем элементы в наблюдатель
 document.querySelectorAll('.number').forEach(element => {
     observer.observe(element);
 }); 
@@ -142,7 +134,6 @@ document.querySelector('.animation').addEventListener('click', function() {
     }
 };
 
-// Прокрутка вверх при нажатии кнопки
 document.getElementById('scrollToTopBtn').onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };  

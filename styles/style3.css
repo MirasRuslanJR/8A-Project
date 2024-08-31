@@ -2,6 +2,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   box-sizing: border-box;
+  cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1537.cur), auto !important;
 }
 
 *::-webkit-scrollbar {
@@ -15,6 +16,10 @@
 
 abbr {
   cursor: pointer;
+}
+
+img {
+  pointer-events: none;
 }
 
 body {

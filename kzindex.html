@@ -38,52 +38,52 @@
     <!-- Internal CSS -->
     <style>
     /* Styles for screens up to 768px */
-    @media (max-width: 425px) {
-  .beyim-synaq-img { display: none; }
-  .map { height: 30rem; width: 100%; }
-  .map-container { margin: 50px 0 20px; flex-direction: column; }
-  .kurator { width: 100%; height: auto; overflow: hidden; }
-  .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
-  .nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
-  .nis-content1 p, .nis-content2 p { font-size: 0.9em; }
+@media (max-width: 425px) {
+    .beyim-synaq-img { display: none; }
+    .map { height: 30rem; width: 100%; }
+    .map-container { margin: 50px 0 20px; flex-direction: column; }
+    .kurator { width: 100%; height: auto; overflow: hidden; }
+    .kurator img { border-radius: 10px 10px 0 0; height: 100%; max-width: 100%; margin: 0; }
+    .nis-content1 h1, .nis-content2 h2 { font-size: 1.2em; }
+    .nis-content1 p, .nis-content2 p { font-size: 0.9em; }
 }
 
 @media (max-width: 600px) {
-  .kurator-content { flex-direction: column; }
-  .kurator { padding: 5px; }
-  .text-content h1 { font-size: 1.25rem; }
-  .additional-info { font-size: 0.7rem; }
+.kurator-content { flex-direction: column; }
+.kurator { padding: 5px; }
+.text-content h1 { font-size: 1.25rem; }
+.additional-info { font-size: 0.7rem; }
 }
 
 @media (max-width: 768px) {
-  .menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
-  .menu.active { display: flex; }
-  .menu-toggle, .close-menu { display: flex; }
-  .menu a { text-align: center; margin: 10px 0; }
-  .language-dropdown { margin-left: 0; text-align: center; }
-  .NIS-logo, .logoo { display: none; }
-  .enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
-  .swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
-  .news-container { width: 100%; flex-direction: column; }
-  .beyim-synaq-img { max-width: 40rem; }
-  .facts { flex-direction: column; align-items: center; }
-  .fact { margin: 30px; }
-  .swiper-container { width: 100%; }
-  .kurator { padding: 10px; }
-  .kurator-content { gap: 10px; flex-direction: column; }
-  .text-content h1 { font-size: 1.5rem; }
-  .additional-info { font-size: 1rem; }
-  .about-NIS { border-radius: 8px; }
-  .nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
-  .nis-content1, .nis-content2 { margin: 0; width: 100%; }
-  .nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
-  .nis-content1 p, .nis-content2 p { font-size: 1em; text-align: center;}
-  .swiper-slide img {filter: brightness(100%);}
-  .kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
+.menu { display: none; flex-direction: column; background-color: transparent; color: black; background: rgba(46, 46, 46, 0.3); backdrop-filter: blur(10px);}
+.menu.active { display: flex; }
+.menu-toggle, .close-menu { display: flex; }
+.menu a { text-align: center; margin: 10px 0; }
+.language-dropdown { margin-left: 0; text-align: center; }
+.NIS-logo, .logoo { display: none; }
+.enindex-btn:hover, .kzindex-btn:hover { border-radius: 0; }
+.swiper-text-overlay, .swiper-pagination, .swiper-pagination-bullets, .scrolled { display: none; }
+.news-container { width: 100%; flex-direction: column; }
+.beyim-synaq-img { max-width: 40rem; }
+.facts { flex-direction: column; align-items: center; }
+.fact { margin: 30px; }
+.swiper-container { width: 100%; }
+.kurator { padding: 10px; }
+.kurator-content { gap: 10px; flex-direction: column; }
+.text-content h1 { font-size: 1.5rem; }
+.additional-info { font-size: 1rem; }
+.about-NIS { border-radius: 8px; }
+.nis-content-wrapper { padding: 10px; display: flex; flex-direction: column; }
+.nis-content1, .nis-content2 { margin: 0; width: 100%; }
+.nis-content1 h1, .nis-content2 h2 { font-size: 1.5em; }
+.nis-content1 p, .nis-content2 p { font-size: 1em; text-align: center;}
+.kurator img { border-radius: 10px; display: block; margin-left: auto; margin-right: auto; }
+.swiper-slide img {filter: brightness(100%);}
 }
 
 @media (max-width: 1024px) {
-  .fact { margin: 20px; }
+.fact { margin: 20px; }
 }
     </style>
 </head>
@@ -100,8 +100,8 @@
             <div id="language-menu" class="language-dropdown">
                 <button class="language-dropbtn">Қазақша</button>
                 <div class="language-dropdown-content">
-                    <a class="kzindex-btn" href="index.html" target="_blank">Русский</a>
-                    <a class="enindex-btn" href="enindex.html" target="_blank">English</a>
+                    <a class="kzindex-btn" href="index.html">Русский</a>
+                    <a class="enindex-btn" href="enindex.html">English</a>
                 </div>
             </div>
         </nav>
@@ -130,7 +130,7 @@
                 <p class="number" data-end="32">0</p>
             </div>
             <div class="fact">
-                <h1>23-24 оқу жылындағы үздік оқушылар саны</h1>
+                <h1>23-24 жылындағы үздік оқушылар</h1>
                 <p class="number" data-end="7">0</p>
             </div> 
             <div class="fact">
@@ -148,19 +148,19 @@
                 <h3>Футзалдан 3-орын</h3>
                 <h6>2023 жыл 11 қараша</h6>
                 <p>7-сынып оқушылары арасында футзалдаг сайыс өтті. Ойындар қызықты және күтпеген жағдайларға толы болды. Сайыс соңында ең мықты және бірлікті командалар анықталды.</p>
-                <a href="./news/1newsru.html">Толығырақ оқу</a>
+                <a href="./news/1newskz.html">Толығырақ оқу</a>
             </div>
             <div class="news-container">
                 <h3>«Кітап-fest» жобасы</h3>
                 <h6>2024 жыл 26 ақпан</h6>
                 <p>2023-2024 оқу жылында Назарбаев Интеллектуалды Мектебінің оқушылары «Кітап-fest» жобасын 8 наурызға арнап әдебиеттегі әйелдер образдарына арнады.</p>
-                <a href="./news/2newsru.html">Толығырақ оқу</a>
+                <a href="./news/2newskz.html">Толығырақ оқу</a>
             </div>
             <div class="news-container">
                 <h3>Дебаттардан 1-орын</h3>
                 <h6>2024 жыл 23 қаңтар</h6>
                 <p>7-сынып оқушылары арасында дебаттар өтті. Сайыс күтпеген жағдайлар мен қызықты сәттерге толы болды. Турнир нәтижесінде дәлелді пікірлер анықталды.</p>
-                <a href="./news/3newsru.html">Толығырақ оқу</a>
+                <a href="./news/3newskz.html">Толығырақ оқу</a>
             </div>
         </section>
         
