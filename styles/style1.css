@@ -224,6 +224,7 @@ header {
 }
 
 .facts-h1 {
+  margin-top: 200px;
   text-align: left;
   margin-bottom: 60px;
   padding: 30px;
@@ -246,6 +247,7 @@ header {
 }
 
 .facts {
+  margin-top: 100px;
   border-radius: 10px 0 0 10px;
   margin-left: 30px;
   display: flex;
@@ -294,6 +296,7 @@ main {
 }
 
 .news {
+  margin-top: 200px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap; 
@@ -367,6 +370,7 @@ main {
 }
 
 .beyim-synaq{
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,7 +387,7 @@ main {
 }
 
 .about-us {
-  margin-top: 50px; 
+  margin-top: 150px; 
   padding: 15px;
   width: 100vw;
   background-color: #67c2ff;
@@ -451,7 +455,7 @@ main {
   display: grid;
   place-items: center;
   width: 100%;
-  margin: 50px auto 30px;
+  margin: 50px auto 50px;
   box-sizing: border-box;
 }
 
@@ -462,17 +466,18 @@ main {
 
 .kurator img {
   border-radius: 10px 0 0 10px;
-  max-width: 100%;
   height: auto;
   object-fit: cover;
   transition: margin-left 0.5s ease;
 }
 
 .text-container {
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+
 }
 
 .kurator-content {
@@ -480,7 +485,6 @@ main {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
-  text-align: center;
   font-family: "Murecho", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -488,7 +492,7 @@ main {
 }
 
 .text-content {
-  margin-bottom: 10
+  margin-bottom: 10;
 }
 
 .additional-info {
@@ -497,9 +501,6 @@ main {
 
 .about-NIS {
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10% 30% 10% 30%/30% 10% 30% 10%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   overflow: hidden;
   font-family: "Murecho", sans-serif;
@@ -530,9 +531,9 @@ main {
   text-align: center;
 }
 
-.about-NIS img {
-  margin-top: 25px;
-  width: 40px;
+.about-NIS a {
+  text-decoration: none;
+  color: #0056b3;
 }
 
 .map-container {
